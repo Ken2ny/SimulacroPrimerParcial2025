@@ -64,7 +64,7 @@ class Moto{
             return false;
         }
     }
-    //
+    //VERIFICA SI HAY DISPONIBILIDAD, SI HAY SE CALCULA EL PRECIO SINO DA VALOR 0
     public function darPrecioVenta(){
         if($this->verificarDisponibilidad() == false){
             $venta = 0;
