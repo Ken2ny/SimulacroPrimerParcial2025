@@ -69,18 +69,21 @@ class Empresa{
     }
 
     public function registrarVenta($colCodigosMoto, $objCliente){
-        
-        $venta = new Venta($numero,$fecha,$objCliente, [], 0);
+        if ($objCliente->verificarBaja()){
+            return 0;
+        }
+
+        $compra = new Venta(count($this->ventas) + 1, 2025, $objCliente,[],0);
 
         foreach($colCodigosMoto as $codigoMoto){
             $objMoto = $this->retornarMoto($codigoMoto);
         if ($objMoto !==null && $objMoto->verificarDisponibilidad()){
-            $venta->incorporarMoto($objMoto);
+            $compra->incorporarMoto($objMoto);
         }
         }
-       if(count($venta->getColeccionMoto())> 0){
-        $this->ventas[] = $venta;
-        return $venta->getPrecioFinal();   
+       if(count($compra->getColeccion())> 0){
+        $this->ventas[] = $compra;
+        return $compra->getPrecioFinal();   
     }
        return 0;
     }
@@ -93,6 +96,7 @@ class Empresa{
             $ventasUnCliente[] = $venta;
         }    
     }
+    return $ventasUnCliente;
     }
 
 
