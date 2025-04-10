@@ -32,21 +32,76 @@ class Empresa{
         $this->ventas = $ventas;
     }
     //GET
-    public function get(){
-        return $this->
+    public function getDenominacion(){
+        return $this->denominacion;
     }
-    public function get(){
-        return $this->
+    public function getDireccion(){
+        return $this->direccion;
     }
-    public function get(){
-        return $this->
+    public function getColeccionCliente(){
+        return $this->coleccionCliente;
     }
-    public function get(){
-        return $this->
+    public function getColeccionMoto(){
+        return $this->coleccionMoto;
     }
-    public function get(){
-        return $this->
+    public function getVentas(){
+        return $this->ventas;
     }
+    //METODOS
+    //TO STRING
+    public function __toString()
+    {
+        return
+        "Denominacion: $this->denominacion \n" . 
+        "Direccion : $this->direccion \n" . 
+        "Coleccion Cliente: " . $this->coleccionCliente . "\n" . 
+        "Coleccion de Motos: " . $this->coleccionMoto . "\n" . 
+        "Ventas Totales: " . $this->ventas . "\n";
+    }
+
+    public function retornarMoto($codigoMoto){        
+        foreach ($this->coleccionMoto as $objMoto){
+            if ($objMoto->getCodigo() == $codigoMoto){
+                return $objMoto;
+            }
+        }
+        return null;
+    }
+
+    public function registrarVenta($colCodigosMoto, $objCliente){
+        
+        $venta = new Venta($numero,$fecha,$objCliente, [], 0);
+
+        foreach($colCodigosMoto as $codigoMoto){
+            $objMoto = $this->retornarMoto($codigoMoto);
+        if ($objMoto !==null && $objMoto->verificarDisponibilidad()){
+            $venta->incorporarMoto($objMoto);
+        }
+        }
+       if(count($venta->getColeccionMoto())> 0){
+        $this->ventas[] = $venta;
+        return $venta->getPrecioFinal();   
+    }
+       return 0;
+    }
+
+    public function retornarVentasXCliente($tipo,$numDoc){
+    $ventasUnCliente = [];
+    foreach($this->ventas as $venta){
+        $cliente = $venta->getRefCliente();
+        if($cliente->getTipo() === $tipo && $cliente->getDocumento() === $numDoc){
+            $ventasUnCliente[] = $venta;
+        }    
+    }
+    }
+
+
+
+
+
+
+
+
 
 
 
