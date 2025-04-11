@@ -65,8 +65,8 @@ class Venta{
         "Numero: $this->numero \n" . 
         "Fecha: $this->fecha \n" . 
         "Referencia del Cliente: $this->referenciaCliente \n" . 
-        "Referencia a la Coleccion: \n";
-        implode("\n", $this->coleccion) . "\n";
+        "Referencia a la Coleccion: \n" .
+        implode("\n", $this->coleccion) . "\n" . 
         "Precio Final: " . $this->precioFinal . "\n";
     }
 

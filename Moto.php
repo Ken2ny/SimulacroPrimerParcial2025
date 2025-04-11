@@ -75,6 +75,16 @@ class Moto{
         }
         return $venta;
     }
+    public function __toString()
+    {
+        return
+        "Codigo: " . $this->codigo . "\n" . 
+        "Costo: " . $this->costo . "\n" . 
+        "Anho de Fabricacion: " . $this->anhoFabricacion . "\n" . 
+        "Descripcion: " . $this->descripcion . "\n" . 
+        "Porcentaje Anual: " . $this->porcentajeAnual . "\n" . 
+        "Estado: " . $this->activa . "\n";
+    }
 }
 //Clase - Moto
 
