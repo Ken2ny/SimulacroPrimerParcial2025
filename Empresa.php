@@ -91,15 +91,17 @@ class Empresa{
     //TO STRING
     public function __toString()
     {
-        return
-        "Denominacion: $this->denominacion \n" . 
-        "Direccion : $this->direccion \n" . 
+    $cadena = (
+        "Denominacion: " . $this->getDenominacion() . "\n" .
+        "Direccion: " . $this->getDireccion() . "\n" .
         "Coleccion Cliente: \n" . 
-        implode("\n", $this->coleccionCliente) . "\n" .
+        implode("\n", $this->getColeccionCliente()) . "\n" .
         "Coleccion de Motos: \n" . 
-        implode("\n", $this->coleccionMoto) . "\n" . 
+        implode("\n", $this->getColeccionMoto()) . "\n" . 
         "Ventas Totales: \n" .
-        implode("\n", $this->ventas) . "\n";
+        implode("\n", $this->getVentas()) . "\n"
+    );
+    return $cadena;
     }
 }
 //Clase - Empresa

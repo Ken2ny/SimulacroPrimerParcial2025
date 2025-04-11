@@ -61,13 +61,14 @@ class Venta{
     }
     public function __toString()
     {
-        return
-        "Numero: $this->numero \n" . 
-        "Fecha: $this->fecha \n" . 
-        "Referencia del Cliente: \n" . $this->referenciaCliente .  "\n" . 
+    $cadena = ( 
+        "Numero: " . $this->getNumero() . "\n" . 
+        "Fecha: " .  $this->getFecha() . "\n" .
+        "Referencia del Cliente: \n" . $this->getRefCliente() .  "\n" . 
         "Referencia a la Coleccion: \n" .
-        implode("\n", $this->coleccion) . "\n" . 
-        "Precio Final: " . $this->precioFinal . "\n";
+        implode("\n", $this->getColeccion()) . "\n" . 
+        "Precio Final: " . $this->getPrecioFinal() . "\n"
+    );
     }
 
 }

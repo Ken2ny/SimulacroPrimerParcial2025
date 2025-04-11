@@ -59,14 +59,16 @@ class Cliente
         }
     }
     //String
-    public function __toString()
-    {
-        return 
-        "Nombre: $this->nombre \n" . 
-        "Apellido: $this->apellido \n" . 
-        "Estado: $this->baja \n" . 
-        "Tipo: $this->tipo \n" . 
-        "Documento: $this->documento \n";
+    public function __toString(){
+
+        $cadena = ( 
+        "Nombre:" . $this->getNombre() . "\n" .
+        "Apellido: " . $this->getApellido() . "\n" .
+        "Estado: " . $this->getBaja() . "\n" .
+        "Tipo: " . $this->getTipo() . "\n" .
+        "Documento: " . $this->getDocumento() . "\n"
+        );
+        return $cadena;
     }
 
 }

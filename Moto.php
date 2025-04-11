@@ -77,13 +77,15 @@ class Moto{
     }
     public function __toString()
     {
-        return
-        "Codigo: " . $this->codigo . "\n" . 
-        "Costo: " . $this->costo . "\n" . 
-        "Anho de Fabricacion: " . $this->anhoFabricacion . "\n" . 
-        "Descripcion: " . $this->descripcion . "\n" . 
-        "Porcentaje Anual: " . $this->porcentajeAnual . "\n" . 
-        "Estado: " . $this->activa . "\n";
+    $cadena = ( 
+        "Codigo: " . $this->getCodigo() . "\n" . 
+        "Costo: " . $this->getCosto() . "\n" . 
+        "Anho de Fabricacion: " . $this->getFabricacion() . "\n" . 
+        "Descripcion: " . $this->getDescripcion() . "\n" . 
+        "Porcentaje Anual: " . $this->getPorcentaje() . "\n" . 
+        "Estado: " 
+    );
+    return $cadena;
     }
 }
 //Clase - Moto
