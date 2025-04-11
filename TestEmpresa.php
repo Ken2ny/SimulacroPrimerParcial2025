@@ -34,9 +34,18 @@ echo "Precio Venta 3: " . $precioVenta3 . "\n";
 
 echo "Ventas de Cliente 1: \n";
 $ventaTotal1 = $empresa->retornarVentasXCliente($objcliente1->getTipo(), $objcliente1->getDocumento());
-
+if (count($ventaTotal1)> 0) {
+    foreach ($ventaTotal1 as $venta){
+        echo $venta . "\n";
+    }
+}
 echo "Ventas de Cliente 2: \n";
 $ventaTotal2 = $empresa->retornarVentasXCliente($objcliente2->getTipo(), $objcliente2->getDocumento());
+if (count($ventaTotal2) > 0){
+    foreach ($ventaTotal2 as $venta){
+        echo $venta . "\n";
+    }
+}
 
 echo "Empresa\n";
 echo $empresa;
