@@ -119,3 +119,5 @@ class Empresa{
 //$compra -> es la nueva compra de moto
 //$ventasUnCliente -> es el total de veces comprada de un cliente
 //$cliente -> cliente referido
+
+//Implode, convierte un array en texto
