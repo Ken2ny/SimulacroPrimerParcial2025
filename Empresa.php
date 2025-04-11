@@ -48,17 +48,6 @@ class Empresa{
         return $this->ventas;
     }
     //METODOS
-    //TO STRING
-    public function __toString()
-    {
-        return
-        "Denominacion: $this->denominacion \n" . 
-        "Direccion : $this->direccion \n" . 
-        "Coleccion Cliente: " . $this->coleccionCliente . "\n" . 
-        "Coleccion de Motos: " . $this->coleccionMoto . "\n" . 
-        "Ventas Totales: " . $this->ventas . "\n";
-    }
-
     public function retornarMoto($codigoMoto){        
         foreach ($this->coleccionMoto as $objMoto){
             if ($objMoto->getCodigo() == $codigoMoto){
@@ -97,6 +86,20 @@ class Empresa{
         }    
     }
     return $ventasUnCliente;
+    }
+    
+    //TO STRING
+    public function __toString()
+    {
+        return
+        "Denominacion: $this->denominacion \n" . 
+        "Direccion : $this->direccion \n" . 
+        "Coleccion Cliente: \n" . 
+        implode("\n", $this->coleccionCliente) . "\n" .
+        "Coleccion de Motos: \n" . 
+        implode("\n", $this->coleccionMoto) . "\n" . 
+        "Ventas Totales: \n" .
+        implode("\n", $this->ventas) . "\n";
     }
 }
 //Clase - Empresa

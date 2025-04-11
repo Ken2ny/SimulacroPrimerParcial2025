@@ -69,12 +69,13 @@ class Moto{
         if($this->verificarDisponibilidad() == false){
             $venta = 0;
         } else {
-            $anios = 2025 - $this->anhoFabricacion;
+            $anhoActual = date("Y");
+            $anios = $anhoActual - $this->anhoFabricacion;
             $venta = $this->costo + $this->costo * ($anios * $this->porcentajeAnual);
         }
         return $venta;
     }
-
+}
 //Clase - Moto
 
 //Caracteristicas
@@ -89,6 +90,3 @@ class Moto{
 //$venta
 //$anios
 //
-
-
-}
