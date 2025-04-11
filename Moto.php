@@ -58,7 +58,7 @@ class Moto{
     //METODOS
     //VERIFICACION DE SI HAY STOCK DE LA MOTO
     public function verificarDisponibilidad(){
-        if($this->activa == "Disponible"){
+        if($this->activa == "activa"){
             return true;
         } else {
             return false;
