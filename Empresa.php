@@ -99,7 +99,20 @@ class Empresa{
     return $ventasUnCliente;
     }
 
-
+//Clase - Empresa
+//Caracteristicas
+//denominacion - direccion - Coleccion del Cliente - Coleccion Moto - ventas
+//Metodos
+//retornarMoto
+//registrarVenta
+//retornarVentasXCliente
+//Variables usadas en metodos:
+//$objCliente -> es el cliente
+//$colCodigosMoto -> el codigo de la moto en la coleccion
+//$objMoto -> es la moto
+//$compra -> es la nueva compra de moto
+//$ventasUnCliente -> es el total de veces comprada de un cliente
+//$cliente -> cliente referido
 
 
 
