@@ -71,7 +71,7 @@ class Moto{
         } else {
             $anhoActual = date("Y");
             $anios = $anhoActual - $this->anhoFabricacion;
-            $venta = $this->costo + $this->costo * ($anios * ($this->porcentajeAnual /100));
+            $venta = $this->costo + $this->costo * ($anios * $this->porcentajeAnual);
         }
         return $venta;
     }
