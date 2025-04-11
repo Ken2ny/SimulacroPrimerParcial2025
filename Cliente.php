@@ -69,7 +69,7 @@ class Cliente
         "Documento: $this->documento \n";
     }
 
-
+}
 //Clase - CLIENTE
 
 //Caracteristicas
@@ -83,12 +83,3 @@ class Cliente
 
 
 
-
-
-
-
-
-
-
-
-}

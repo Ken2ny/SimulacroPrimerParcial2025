@@ -17,7 +17,7 @@ class Empresa{
     }
     //SET
     public function setDenominacion($denominacion){
-        $this->direccion = $denominacion;
+        $this->denominacion = $denominacion;
     }
     public function setDireccion($direccion){
         $this->direccion = $direccion;
@@ -98,7 +98,7 @@ class Empresa{
     }
     return $ventasUnCliente;
     }
-
+}
 //Clase - Empresa
 
 //Caracteristicas
@@ -116,18 +116,3 @@ class Empresa{
 //$compra -> es la nueva compra de moto
 //$ventasUnCliente -> es el total de veces comprada de un cliente
 //$cliente -> cliente referido
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}

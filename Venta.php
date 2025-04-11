@@ -8,7 +8,7 @@ class Venta{
     private $Coleccion;
     private $precioFinal;
 
-    public function __construct($numero, $fecha, $referenciaCliente, $Coleccion, $precioFinal){
+    public function __construct($numero, $fecha, $referenciaCliente){
         $this->numero = $numero;
         $this->fecha = $fecha;
         $this->referenciaCliente = $referenciaCliente;
@@ -67,9 +67,7 @@ class Venta{
         }
         return false;
     }
-
-
-
+}
 //Clase - Venta
 
 //Caracteristicas
@@ -80,24 +78,3 @@ class Venta{
 //Variables en metodos:
 //$objMoto -> es la moto
 //
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
