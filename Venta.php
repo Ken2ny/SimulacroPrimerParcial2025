@@ -70,6 +70,16 @@ class Venta{
 
 
 
+//Clase - Venta
+
+//Caracteristicas
+//Numero - fecha - referencia cliente - referenciaColeccion - PrecioFinal
+//Metodos
+//incorporarMoto
+
+//Variables en metodos:
+//$objMoto -> es la moto
+//
 
 
 

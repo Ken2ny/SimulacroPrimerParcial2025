@@ -100,12 +100,15 @@ class Empresa{
     }
 
 //Clase - Empresa
+
 //Caracteristicas
 //denominacion - direccion - Coleccion del Cliente - Coleccion Moto - ventas
+
 //Metodos
 //retornarMoto
 //registrarVenta
 //retornarVentasXCliente
+
 //Variables usadas en metodos:
 //$objCliente -> es el cliente
 //$colCodigosMoto -> el codigo de la moto en la coleccion

@@ -70,7 +70,16 @@ class Cliente
     }
 
 
+//Clase - CLIENTE
 
+//Caracteristicas
+//Nombre - Apellido - Baja - Tipo - Documento
+
+//Metodo
+//VerificarBaja
+//
+//
+//
 
 
 

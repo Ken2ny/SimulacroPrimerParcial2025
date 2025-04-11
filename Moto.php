@@ -75,8 +75,20 @@ class Moto{
         return $venta;
     }
 
+//Clase - Moto
 
+//Caracteristicas
+//Codigo - Costo - Anho de Fabricacion - Descripcion - PorcentajeAnual - Activa
+//
 
+//METODOS
+//verificarDisponibilidad
+//darPrecioVenta
+
+//Variables usadas en Metodos:
+//$venta
+//$anios
+//
 
 
 }
