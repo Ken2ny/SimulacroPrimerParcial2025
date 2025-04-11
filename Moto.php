@@ -78,12 +78,13 @@ class Moto{
     public function __toString()
     {
     $cadena = ( 
+        "----------------------------------------------------------------------------\n" .
         "Codigo: " . $this->getCodigo() . "\n" . 
         "Costo: " . $this->getCosto() . "\n" . 
         "Anho de Fabricacion: " . $this->getFabricacion() . "\n" . 
         "Descripcion: " . $this->getDescripcion() . "\n" . 
         "Porcentaje Anual: " . $this->getPorcentaje() . "\n" . 
-        "Estado: " 
+        "Estado: " . $this->getActiva() . "\n" 
     );
     return $cadena;
     }

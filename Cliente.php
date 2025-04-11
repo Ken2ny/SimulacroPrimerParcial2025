@@ -62,6 +62,7 @@ class Cliente
     public function __toString(){
 
         $cadena = ( 
+        "----------------------------------------------------------------------------\n" .
         "Nombre: " . $this->getNombre() . "\n" .
         "Apellido: " . $this->getApellido() . "\n" .
         "Estado: " . $this->getBaja() . "\n" .

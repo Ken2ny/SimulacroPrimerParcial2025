@@ -92,13 +92,14 @@ class Empresa{
     public function __toString()
     {
     $cadena = (
+        "----------------------------------------------------------------------------\n" .
         "Denominacion: " . $this->getDenominacion() . "\n" .
         "Direccion: " . $this->getDireccion() . "\n" .
         "Coleccion Cliente: \n" . 
         implode("\n", $this->getColeccionCliente()) . "\n" .
         "Coleccion de Motos: \n" . 
         implode("\n", $this->getColeccionMoto()) . "\n" . 
-        "Ventas Totales: \n" .
+        "Ventas Totales \n" .
         implode("\n", $this->getVentas()) . "\n"
     );
     return $cadena;
