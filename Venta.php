@@ -54,7 +54,7 @@ class Venta{
             $this->coleccion[] = $objMoto;
 
             $this->precioFinal += $objMoto->darPrecioVenta();
-        
+
             return true;
         }
         return false;
@@ -69,6 +69,7 @@ class Venta{
         implode("\n", $this->getColeccion()) . "\n" . 
         "Precio Final: " . $this->getPrecioFinal() . "\n"
     );
+    return $cadena;
     }
 
 }
